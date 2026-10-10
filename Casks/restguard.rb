@@ -1,6 +1,6 @@
 cask "restguard" do
-  version "0.1.4"
-  sha256 "648bfb89dd366a8ce646fdcbe38be360481e63640f545ba487ce84af024ee48c"
+  version "0.1.5"
+  sha256 "aa308720ca32b46cbd796406303a9b20f09066f0ebbdc463eda7606967d94483"
 
   url "https://github.com/HansTanzi/RestGuard/releases/download/v#{version}/RestGuard_#{version}_universal.zip"
   name "RestGuard"
