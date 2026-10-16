@@ -12,12 +12,16 @@ cask "restguard" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "RestGuard.app"
 
   # 应用只做了 ad-hoc 签名、未经 Apple 公证，去掉隔离属性，否则 Gatekeeper 会拒绝打开
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/RestGuard.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/RestGuard.app"],
+        writable_paths: ["RestGuard.app"],
+        writable_base:  :appdir
   end
 
   uninstall quit: "io.github.restguard"
