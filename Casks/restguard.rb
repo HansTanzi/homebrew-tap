@@ -1,8 +1,8 @@
 cask "restguard" do
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
-    sha256 "ccd5b13267b11014dae955b77c513122c1e6dae14e82a4df6c6c035171a9e12e"
+    sha256 "1ca4a70d8d151ad1b40fbb447b796a826f15a908637c47891a97160c7379ce7e"
 
     url "https://github.com/HansTanzi/RestGuard/releases/download/v#{version}/RestGuard_#{version}_universal.zip"
 
@@ -29,7 +29,7 @@ cask "restguard" do
   # 用 artifact 移动到固定路径而不是 binary 符号链接：开机自启记录的是解析后的可执行文件路径，
   # 指向 Caskroom 里带版本号的目录的话，升级后自启会失效
   on_linux do
-    sha256 "83d737f113ad68484f353e6f5ace28f65e3f5602adbf6595de5c4180a7114f11"
+    sha256 "dc3a88ee8cd156238543eae90595193f244a040cc9459c57adfe4a37bc18e8fd"
 
     url "https://github.com/HansTanzi/RestGuard/releases/download/v#{version}/RestGuard_#{version}_x86_64.pkg.tar.zst"
 
